@@ -1,11 +1,12 @@
 .DEFAULT_GOAL := all
 norminette:
-	-norminette ./ex00/ft_strlen.c
-	-norminette ./ex01/ft_putstr.c
-	-norminette ./ex02/ft_putnbr.c
-	-norminette ./ex03/ft_atoi.c
-	-norminette ./ex04/ft_putnbr_base.c
-	-norminette ./ex05/ft_atoi_base.c
+	-norminette ./ex00/btree_create_node.c ./ex00/ft_btree.h
+	-norminette ./ex01/btree_apply_prefix.c ./ex01/ft_btree.h
+# -norminette ./ex02/ft_putnbr.c ./ex02/ft_btree.h
+# -norminette ./ex03/ft_atoi.c ./ex03/ft_btree.h
+# -norminette ./ex04/ft_putnbr_base.c ./ex04/ft_btree.h
+# -norminette ./ex05/ft_atoi_base.c ./ex05/ft_btree.h
+# -norminette ./ex06/ft_atoi_base.c ./ex06/ft_btree.h
 
 compile: norminette
 	-gcc ./ex00/ft_strlen.c test_ex00_ft_strlen.c -Wall -Werror -Wextra -o test_ex00_ft_strlen
@@ -58,3 +59,6 @@ clean-before-push-with-sample: clean
 	-git add .
 	-git commit -m "Build Sample Complete"
 	-git push origin master
+
+
+.PHONY: norminette compile build-sample  run all test clean clean-sample clean-before-push-with-sample
