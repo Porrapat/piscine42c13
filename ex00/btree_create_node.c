@@ -21,8 +21,8 @@ t_btree	*btree_create_node(void *item)
 	if (tree)
 	{
 		tree->item = item;
-		tree->left = 0;
-		tree->right = 0;
+		tree->left = NULL;
+		tree->right = NULL;
 	}
 	return (tree);
 }
