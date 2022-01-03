@@ -12,15 +12,16 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "ex01/ft_btree.h"
+#include "ex04/ft_btree.h"
 
-int		main(void)
+int	main(void)
 {
 	int		data;
-	t_list	*list;
+	t_btree	*btree;
 
 	data = 10;
-	list = ft_create_elem((void *)&data);
-	printf("list->next: %p\n", list->next);
-	printf("list->data: %d\n", *((int *)(list->data)));
+	btree = btree_create_node((void *)&data);
+	printf("btree->left: %p\n", btree->left);
+	printf("btree->right: %p\n", btree->right);
+	printf("btree->item: %d\n", *((int *)(btree->item)));
 }

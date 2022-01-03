@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "ex01/ft_btree.h"
+#include "ex02/ft_btree.h"
 
 int		main(void)
 {

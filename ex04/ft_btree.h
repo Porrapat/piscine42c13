@@ -3,23 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_btree.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rariosa- <rariosa-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/24 12:15:29 by rariosa-          #+#    #+#             */
-/*   Updated: 2017/08/24 19:27:35 by rariosa-         ###   ########.fr       */
+/*   Created: 2021/12/17 14:22:59 by porrapat          #+#    #+#             */
+/*   Updated: 2021/12/17 14:23:55 by porrapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_BTREE_H
 # define FT_BTREE_H
 
-typedef struct		s_btree
+typedef struct s_btree
 {
 	struct s_btree	*left;
 	struct s_btree	*right;
 	void			*item;
 }					t_btree;
 
-t_btree				*btree_create_node(void *item);
-
+t_btree	*btree_create_node(void *item);
+t_btree	*btree_create_node(void *item);
+void	btree_apply_prefix(t_btree *root, void (*applyf)(void *));
+void	btree_apply_infix(t_btree *root, void (*applyf)(void *));
+void	btree_apply_suffix(t_btree *root, void (*applyf)(void *));
+void	btree_insert_data(t_btree **root, void *item,
+			int (*cmpf)(void *, void *));
 #endif
