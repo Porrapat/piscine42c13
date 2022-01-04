@@ -19,7 +19,7 @@ t_btree **g_a[2];
 
 void add_children(t_btree *root)
 {
-	if ()
+	// if ()
 }
 
 void btree_apply_by_level(t_btree *root,
